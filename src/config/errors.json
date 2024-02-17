@@ -23,11 +23,15 @@
         "message": "Category not found",
         "statusCode": 404
     },
+    "cart_not_found": {
+        "message": "Cart not found",
+        "statusCode": 404
+    },
     "user_already_exists": {
         "message": "User already exists",
         "statusCode": 401
     },
-    "category": {
+    "category_already_exists": {
         "message": "Category already exists",
         "statusCode": 401
     },

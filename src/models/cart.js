@@ -23,14 +23,19 @@ const CartSchema = new mongoose.Schema({
 		}
 	},
 	images:{
-		type: Array
+		type: Array,
+		default: []
 	},
 	links:{
-		type: Array
+		type: Array,
+		default: []
 	},
 	status:{
 		type: String,
 		default: "não comprado"
+	},
+	author:{
+		type: String,
 	},
 	category:{
 		type: String,
