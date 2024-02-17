@@ -6,7 +6,7 @@ export default class Service {
 	
     async create({name, description, value, valueRange, images, links, status, category, priority, author}){
         try {
-						const category = new cartModel({
+						const cart = new cartModel({
 							name, 
 							description,
 							value,
@@ -18,9 +18,8 @@ export default class Service {
 							priority, 
 							author
 						});
-						await category.save();
-						return category;
-						return user;	
+						await cart.save();
+						return cart;
         } catch (err) {
             return { error: "internal_error" } ;
         }
