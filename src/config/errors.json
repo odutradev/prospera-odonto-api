@@ -19,8 +19,16 @@
         "message": "User not found",
         "statusCode": 404
     },
+    "category_not_found": {
+        "message": "Category not found",
+        "statusCode": 404
+    },
     "user_already_exists": {
         "message": "User already exists",
+        "statusCode": 401
+    },
+    "category": {
+        "message": "Category already exists",
         "statusCode": 401
     },
     "invalid_credentials": {
