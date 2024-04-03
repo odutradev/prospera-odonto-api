@@ -7,7 +7,7 @@ import config from './config/default.js'
 import { app } from './app.js';
 
 log.setup({
-    prefix: '(MyHouse API)',
+    prefix: '(Template API)',
 });
 
 

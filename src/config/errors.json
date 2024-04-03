@@ -1,42 +1,17 @@
 {
     "internal_error": {
         "message": "Server Error",
+        "removable": false,
         "statusCode": 500
     },
     "token_is_not_valid": {
         "message": "Token is not valid",
+        "removable": false,
         "statusCode": 401
     },
     "no_token": {
         "message": "No token, authorization denied",
+        "removable": false,
         "statusCode": 400
-    },
-    "no_credentials": {
-        "message": "No credentials send",
-        "statusCode": 401
-    },
-    "user_not_found": {
-        "message": "User not found",
-        "statusCode": 404
-    },
-    "category_not_found": {
-        "message": "Category not found",
-        "statusCode": 404
-    },
-    "cart_not_found": {
-        "message": "Cart not found",
-        "statusCode": 404
-    },
-    "user_already_exists": {
-        "message": "User already exists",
-        "statusCode": 401
-    },
-    "category_already_exists": {
-        "message": "Category already exists",
-        "statusCode": 401
-    },
-    "invalid_credentials": {
-        "message": "Invalid Credentials",
-        "statusCode": 401
     }
 }

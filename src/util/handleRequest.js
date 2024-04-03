@@ -4,7 +4,6 @@ const handleRequest = async (req, res, serviceMethod) => {
 	try {
 		const requestData = { ...req.body };
 		const requestUserId = req.user;
-		console.log(req.user)
 		const response = await serviceMethod(requestData, requestUserId);
 
 		if (response?.error) {
