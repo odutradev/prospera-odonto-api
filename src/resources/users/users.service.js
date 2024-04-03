@@ -61,6 +61,16 @@ export default class Service {
             return { error: "internal_error" } ;
         }
     }
+    async delete({ id }){
+        try {
+					const user = await userModel.findById(id);
+					if (!user) return { error: "user_not_found" };
+					const newUser = await userModel.findByIdAndDelete(id);
+					return { success: true };
+        } catch (err) {
+            return { error: "internal_error" } ;
+        }
+    }
 
     
 }

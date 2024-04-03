@@ -1,6 +1,6 @@
 {
-  "name": "polivalente-api",
-  "description": "Uma api rest feita com javascript com o intuito de enviar fornecer dados ao servidor frontend do polivalente",
+  "name": "express-template-api",
+  "description": "Um template de api para agilizar a vida do desenvolvedor.",
   "version": "1.0.0",
   "type": "module",
   "main": "src/server.js",
@@ -24,6 +24,7 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "node-cron": "^3.0.2",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "pm2": "^5.3.1"
   }
 }

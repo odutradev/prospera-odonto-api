@@ -7,6 +7,7 @@ const service = new usersController();
 const usersRouter = Router();
 
 usersRouter.put("/update", auth, service.update);
+usersRouter.delete("/delete", auth, service.delete);
 usersRouter.get("/all", auth, service.users);
 usersRouter.post("/signup", service.signUp);
 usersRouter.post("/signin", service.signIn);

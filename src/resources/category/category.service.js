@@ -37,6 +37,7 @@ export default class Service {
 	
     async delete({ id }){
         try {
+					console.log(id)
 					const category = await categoryModel.findById(id);
 					if (!category) return { error: "category_not_found" };
 					const newCategory = await categoryModel.findByIdAndDelete(id);
