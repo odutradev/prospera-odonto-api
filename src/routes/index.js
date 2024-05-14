@@ -1,5 +1,6 @@
 import { Router } from "express";
 
+import serviceRouter from "./resources/service.router.js";
 import usersRouter from "./resources/users.router.js";
 import spaceRouter from "./resources/space.router.js";
 
@@ -9,5 +10,6 @@ router.get("/ping", (req, res) => {
   res.sendStatus(200);
 });
 
-router.use('/user', usersRouter);
+router.use('/service', serviceRouter);
 router.use('/space', spaceRouter);
+router.use('/user', usersRouter);

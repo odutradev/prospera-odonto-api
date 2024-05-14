@@ -1,4 +1,4 @@
-import serviceModel from "../../models/s.js";
+import serviceModel from "../../models/service.js";
 
 export default class Service {
 
