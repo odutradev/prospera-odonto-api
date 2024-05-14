@@ -26,12 +26,8 @@
         "message": "Space not found",
         "statusCode": 404
     },
-    "address_not_found": {
-        "message": "Address not found",
-        "statusCode": 404
-    },
-    "store_not_found": {
-        "message": "Store not found",
+    "service_not_found": {
+        "message": "Service not found",
         "statusCode": 404
     },
     "user_already_exists": {
