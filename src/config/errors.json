@@ -22,6 +22,10 @@
         "message": "User not found",
         "statusCode": 404
     },
+    "space_not_found": {
+        "message": "Space not found",
+        "statusCode": 404
+    },
     "address_not_found": {
         "message": "Address not found",
         "statusCode": 404
@@ -32,6 +36,10 @@
     },
     "user_already_exists": {
         "message": "User already exists",
+        "statusCode": 401
+    },
+    "space_already_exists": {
+        "message": "Space already exists",
         "statusCode": 401
     },
     "invalid_credentials": {
