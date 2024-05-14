@@ -4,7 +4,7 @@ const SpaceSchema = new mongoose.Schema({
 	name: String,
 	author: String,
 	contact: String,
-	descripton: String,
+	description: String,
 	date:{
 	  type: Date,
 	  default: Date.now()

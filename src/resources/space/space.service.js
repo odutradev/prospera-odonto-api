@@ -9,14 +9,15 @@ export default class Service {
             return { error: "internal_error" } ;
         }
     }
-    async create({ data }, author){
+    async create(data){
         try {
-            const findSpace = await spaceModel.findOne({author, name: data.name});
+            const findSpace = await spaceModel.findOne({author: data.author, name: data.name || ""});
             if (findSpace) return { error: "space_already_exists"}
 			var space = new spaceModel(data);
 			await space.save();
 			return space
         } catch (err) {
+            console.log(err)
             return { error: "internal_error" } ;
         }
     }
