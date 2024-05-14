@@ -1,5 +1,5 @@
 import { handleRequest } from "../../app.js";
-import Service from "./users.service.js";
+import Service from "./space.service.js";
 
 export default class Controller {
 	service = new Service();

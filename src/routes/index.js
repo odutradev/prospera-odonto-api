@@ -1,6 +1,7 @@
 import { Router } from "express";
 
 import usersRouter from "./resources/users.router.js";
+import spaceRouter from "./resources/space.router.js";
 
 export const router = Router();
 
@@ -9,3 +10,4 @@ router.get("/ping", (req, res) => {
 });
 
 router.use('/user', usersRouter);
+router.use('/space', spaceRouter);
