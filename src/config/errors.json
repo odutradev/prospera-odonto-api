@@ -13,5 +13,29 @@
         "message": "No token, authorization denied",
         "removable": false,
         "statusCode": 400
+    },
+    "no_credentials": {
+        "message": "No credentials send",
+        "statusCode": 401
+    },
+    "user_not_found": {
+        "message": "User not found",
+        "statusCode": 404
+    },
+    "address_not_found": {
+        "message": "Address not found",
+        "statusCode": 404
+    },
+    "store_not_found": {
+        "message": "Store not found",
+        "statusCode": 404
+    },
+    "user_already_exists": {
+        "message": "User already exists",
+        "statusCode": 401
+    },
+    "invalid_credentials": {
+        "message": "Invalid Credentials",
+        "statusCode": 401
     }
 }

@@ -7,7 +7,7 @@ import config from './config/default.js'
 import { app } from './app.js';
 
 log.setup({
-    prefix: '(Template API)',
+    prefix: '(Metodo G7 API)',
 });
 
 
