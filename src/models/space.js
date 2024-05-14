@@ -10,12 +10,30 @@ const SpaceSchema = new mongoose.Schema({
 	  default: Date.now()
 	},
 	config:{
-		tax: Number,
-		cardChange: Number,
-		materialTime: Number,
-		valueTime: Number,
-		dentistValue: Number,
-		annualCapital: Number
+		tax: {
+			type: Number,
+			default: 0
+		},
+		cardChange: {
+			type: Number,
+			default: 0
+		},
+		materialTime: {
+			type: Number,
+			default: 0
+		},
+		valueTime: {
+			type: Number,
+			default: 0
+		},
+		dentistValue: {
+			type: Number,
+			default: 0
+		},
+		annualCapital: {
+			type: Number,
+			default: 0
+		}
 	}
 });
 
