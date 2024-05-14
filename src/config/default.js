@@ -1,5 +1,5 @@
 export default {
-      production: false, 
+      production: true, 
       onHttpsServer: false,
       logInternalErrors: true,
       logGeneralErrors: true, 
