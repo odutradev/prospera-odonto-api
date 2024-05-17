@@ -9,6 +9,6 @@ const serviceRouter = Router();
 serviceRouter.delete("/delete", auth, service.delete);
 serviceRouter.post("/create", auth, service.create);
 serviceRouter.put("/update", auth, service.update);
-serviceRouter.get("/get", auth, service.get);
+serviceRouter.post("/get", auth, service.get);
 
 export default serviceRouter;
