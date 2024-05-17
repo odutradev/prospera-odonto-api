@@ -19,7 +19,7 @@ const ServiceSchema = new mongoose.Schema({
 			default: 0
 		},
 		paymentType: {
-			type: Boolean
+			type: String
 		},
 		materialPrice: {
 			type: Number,
