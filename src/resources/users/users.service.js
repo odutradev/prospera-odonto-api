@@ -52,7 +52,7 @@ export default class Service {
             return { error: "internal_error" } ;
         }
     }
-    async update({ data }, id){
+    async update({ data, id }){
         try {
 					const user = await userModel.findById(id);
 					if (!user) return { error: "user_not_found" };
