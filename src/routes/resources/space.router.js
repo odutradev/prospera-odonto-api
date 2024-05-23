@@ -6,7 +6,7 @@ import auth from '../../middlewares/auth.js'
 const service = new spaceController();
 const spaceRouter = Router();
 
-spaceRouter.get("/get-spaces-and-services", auth, service.getSpacesAndServices);
+spaceRouter.post("/get-spaces-and-services", auth, service.getSpacesAndServices);
 spaceRouter.delete("/delete", auth, service.delete);
 spaceRouter.post("/create", auth, service.create);
 spaceRouter.put("/update", auth, service.update);
