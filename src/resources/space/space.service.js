@@ -16,7 +16,7 @@ export default class Service {
             return  await Promise.all(
                 spaces.map(async (space) => {
                   var data = await serviceModel.find({ space: space._id }).sort({ date: -1 });
-                  return { name: space.name, spaceID: space._id, data };
+                  return { name: space.name, spaceID: space._id, data, space };
                 })
               );
         } catch (err) {
