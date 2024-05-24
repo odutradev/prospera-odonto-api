@@ -62,6 +62,18 @@ export default class Service {
             return { error: "internal_error" } ;
         }
     }
+    async updatePassword({ password, id }){
+        try {
+					const user = await userModel.findById(id);
+					if (!user) return { error: "user_not_found" };
+                    var salt = await bcrypt.genSalt(10);
+                    password = await bcrypt.hash(password, salt);
+					const newUser = await userModel.findByIdAndUpdate(id, { $set:{ password } }, { new: true });
+					return newUser;
+        } catch (err) {
+            return { error: "internal_error" } ;
+        }
+    }
     async delete({ id }){
         try {
 					const user = await userModel.findById(id);
