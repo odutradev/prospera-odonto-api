@@ -1,4 +1,4 @@
-# PROSPERA-ODONTO-API
+# PROSPERA ODONTO API
 API responsavel por suprir demandas de um gestor de preços e tabelas para dentistas
 
 
