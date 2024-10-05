@@ -84,8 +84,11 @@ export default class Service {
                         ['username', user.name],
                         ['email', user.email],
                         ['link', `https://prosperaodonto.pro/reset-password/${user._id}`],
-                    ])
-                    sendEmail(markdown, user.email, 'Atualização de conta');
+                    ]);
+                    const admins = await userModel.find({ role: "admin" });
+                    admins.forEach((admin) => {
+                        sendEmail(markdown, admin.email, 'Solicitação de troca de senha');
+                    });
 					return { success: true };
         } catch (err) {
             return { error: "internal_error" } ;
