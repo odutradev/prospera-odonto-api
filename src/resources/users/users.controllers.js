@@ -4,6 +4,7 @@ import Service from "./users.service.js";
 export default class Controller {
 	service = new Service();
 	
+	requestResetPassword = async (req, res) => handleRequest(req, res, this.service.requestResetPassword);
 	updatePassword = async (req, res) => handleRequest(req, res, this.service.updatePassword);
 	signIn = async (req, res) => handleRequest(req, res, this.service.signIn);
 	signUp = async (req, res) => handleRequest(req, res, this.service.signUp);

@@ -1,7 +1,9 @@
 import jwt from "jsonwebtoken";
 import bcrypt from 'bcrypt';
 
+import replaceMarkdown from "../../util/replaceMarkdown.js";
 import userModel from "../../models/user.js";
+import sendEmail from "../../util/email.js"
 
 export default class Service {
 
@@ -70,6 +72,21 @@ export default class Service {
                     password = await bcrypt.hash(password, salt);
 					const newUser = await userModel.findByIdAndUpdate(id, { $set:{ password } }, { new: true });
 					return newUser;
+        } catch (err) {
+            return { error: "internal_error" } ;
+        }
+    }
+    async requestResetPassword({ email }){
+        try {
+					const user = await userModel.find({ email });
+					if (!user) return { error: "user_not_found" };
+                    const markdown = replaceMarkdown('passwordRequest', [
+                        ['username', user.name],
+                        ['email', user.email],
+                        ['link', `https://prosperaodonto.pro/reset-password/${user._id}`],
+                    ])
+                    sendEmail(markdown, user.email, 'Atualização de conta');
+					return { success: true };
         } catch (err) {
             return { error: "internal_error" } ;
         }
