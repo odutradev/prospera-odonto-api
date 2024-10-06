@@ -1,13 +1,13 @@
-# Solicitação de troca de senha
+# Redefinição de Senha
 
-Olá,
+Olá **{name}**,
 
-Há uma nova solicitação do **{username}/{email}**  para redefinição de senha.
+Recebemos uma solicitação para redefinir a senha da sua conta associada ao e-mail **{email}**.
 
-Para autorizar, envie a url abaixo:
+Clique no link abaixo para redefinir sua senha:
 
 ## **{link}**
 
 Por favor, **não compartilhe este link** com ninguém. Ele é confidencial e deve ser usado apenas para concluir o processo de redefinição de senha.
 
-Se você não reconhece ou autoriza essa solicitação, por favor, ignore este e-mail.
+Se você não solicitou essa redefinição, por favor, ignore este e-mail.

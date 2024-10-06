@@ -85,10 +85,7 @@ export default class Service {
                         ['email', user.email],
                         ['link', `https://prosperaodonto.pro/reset-password/${user._id}`],
                     ]);
-                    const admins = await userModel.find({ role: "admin" });
-                    admins.forEach((admin) => {
-                        sendEmail(markdown, admin.email, 'Solicitação de troca de senha');
-                    });
+                    sendEmail(markdown, user.email, 'Redefinição de Senha');
 					return { success: true };
         } catch (err) {
             return { error: "internal_error" } ;
@@ -98,7 +95,7 @@ export default class Service {
         try {
 					const user = await userModel.findById(id);
 					if (!user) return { error: "user_not_found" };
-					const newUser = await userModel.findByIdAndDelete(id);
+					await userModel.findByIdAndDelete(id);
 					return { success: true };
         } catch (err) {
             return { error: "internal_error" } ;
