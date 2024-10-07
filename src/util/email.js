@@ -17,6 +17,7 @@ const email = async (markdown, to, subject) => {
     try {
         await transporter.sendMail({ from: process.env.EMAIL_USER, to, subject, html });
     } catch (error) {
+        console.log(error)
     }
 };  
 
