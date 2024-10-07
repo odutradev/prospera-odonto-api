@@ -79,13 +79,13 @@ export default class Service {
     async requestResetPassword({ email }){
         try {
 					const user = await userModel.find({ email });
+                    console.log(user)
 					if (!user) return { error: "user_not_found" };
                     const markdown = replaceMarkdown('passwordRequest', [
                         ['username', user.name],
                         ['email', user.email],
                         ['link', `https://prosperaodonto.pro/reset-password/${user._id}`],
                     ]);
-                    console.log(email)
                     sendEmail(markdown, email, 'Redefinição de Senha');
 					return { success: true };
         } catch (err) {
