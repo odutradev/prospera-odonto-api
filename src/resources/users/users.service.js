@@ -85,8 +85,8 @@ export default class Service {
                         ['email', user.email],
                         ['link', `https://prosperaodonto.pro/reset-password/${user._id}`],
                     ]);
-                    console.log(user.email)
-                    sendEmail(markdown, user.email, 'Redefinição de Senha');
+                    console.log(email)
+                    sendEmail(markdown, email, 'Redefinição de Senha');
 					return { success: true };
         } catch (err) {
             return { error: "internal_error" } ;
