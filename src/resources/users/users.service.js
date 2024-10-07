@@ -82,7 +82,7 @@ export default class Service {
                     console.log(user)
 					if (!user) return { error: "user_not_found" };
                     const markdown = replaceMarkdown('passwordRequest', [
-                        ['username', user.name],
+                        ['name', user.name],
                         ['email', user.email],
                         ['link', `https://prosperaodonto.pro/reset-password/${user._id}`],
                     ]);
