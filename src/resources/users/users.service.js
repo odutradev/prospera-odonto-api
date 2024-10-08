@@ -78,8 +78,7 @@ export default class Service {
     }
     async requestResetPassword({ email }){
         try {
-					const user = await userModel.find({ email });
-                    console.log(user)
+					const user = await userModel.findOne({ email });
 					if (!user) return { error: "user_not_found" };
                     const markdown = replaceMarkdown('passwordRequest', [
                         ['name', user.name],
